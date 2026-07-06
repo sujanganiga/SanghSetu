@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@octokit/rest": "^22.0.1",
     "next": "13.5.7",
     "react": "^18",
     "react-dom": "^18"

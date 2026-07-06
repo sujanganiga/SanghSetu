@@ -14,7 +14,7 @@ export async function POST(request: Request) {
     return NextResponse.json(
       {
         error:
-          "Cannot save on Vercel. Run locally (npm run dev), add area, then push data/mandal.json to redeploy.",
+          "Cannot save on Vercel without GitHub storage. Set GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, and GITHUB_BRANCH in Vercel environment variables.",
       },
       { status: 503 }
     );

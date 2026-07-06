@@ -1,5 +1,10 @@
 import { promises as fs } from "fs";
 import path from "path";
+import {
+  getMandalFromGitHub,
+  isGitHubStorageEnabled,
+  saveMandalToGitHub,
+} from "@/lib/github";
 import type {
   Area,
   AreaInput,
@@ -95,6 +100,15 @@ function migrateLegacyMandal(raw: Record<string, unknown>): Mandal {
 }
 
 export async function getMandal(): Promise<Mandal> {
+  if (process.env.VERCEL === "1" && isGitHubStorageEnabled()) {
+    try {
+      const raw = await getMandalFromGitHub();
+      return migrateLegacyMandal(raw as unknown as Record<string, unknown>);
+    } catch {
+      // Fall back to bundled file if GitHub read fails
+    }
+  }
+
   try {
     const raw = await fs.readFile(DATA_FILE, "utf-8");
     return migrateLegacyMandal(JSON.parse(raw) as Record<string, unknown>);
@@ -104,12 +118,18 @@ export async function getMandal(): Promise<Mandal> {
 }
 
 export async function saveMandal(mandal: Mandal): Promise<void> {
+  if (process.env.VERCEL === "1" && isGitHubStorageEnabled()) {
+    await saveMandalToGitHub(mandal);
+    return;
+  }
+
   await fs.mkdir(path.dirname(DATA_FILE), { recursive: true });
   await fs.writeFile(DATA_FILE, JSON.stringify(mandal, null, 2), "utf-8");
 }
 
 export function isWritableEnvironment(): boolean {
-  return process.env.VERCEL !== "1";
+  if (process.env.VERCEL !== "1") return true;
+  return isGitHubStorageEnabled();
 }
 
 export function findStana(mandal: Mandal, id: string): Stana | undefined {
