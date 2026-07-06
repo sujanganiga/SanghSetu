@@ -221,7 +221,13 @@
             {
               "id": "gudri",
               "name": "Gudri",
-              "areas": []
+              "areas": [
+                {
+                  "id": "nisarga",
+                  "name": "Nisarga",
+                  "members": []
+                }
+              ]
             }
           ]
         },
