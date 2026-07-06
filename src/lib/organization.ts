@@ -118,7 +118,10 @@ export async function getMandal(): Promise<Mandal> {
 }
 
 export async function saveMandal(mandal: Mandal): Promise<void> {
-  if (process.env.VERCEL === "1" && isGitHubStorageEnabled()) {
+  if (process.env.VERCEL === "1") {
+    if (!isGitHubStorageEnabled()) {
+      throw new Error(STORAGE_UNAVAILABLE_ERROR);
+    }
     await saveMandalToGitHub(mandal);
     return;
   }
@@ -131,6 +134,9 @@ export function isWritableEnvironment(): boolean {
   if (process.env.VERCEL !== "1") return true;
   return isGitHubStorageEnabled();
 }
+
+export const STORAGE_UNAVAILABLE_ERROR =
+  "GitHub storage is not configured on Vercel. Add GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO, and GITHUB_BRANCH in Vercel → Settings → Environment Variables, then redeploy.";
 
 export function findStana(mandal: Mandal, id: string): Stana | undefined {
   return mandal.stanas.find((s) => s.id === id);

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/auth";
-import { addGrama, isWritableEnvironment, removeGrama, updateGrama } from "@/lib/organization";
+import { requireWritableStorage } from "@/lib/api-utils";
+import { addGrama, removeGrama, updateGrama } from "@/lib/organization";
 import type { GramaInput, NameUpdate } from "@/types/organization";
 
 export const dynamic = "force-dynamic";
@@ -10,9 +11,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!isWritableEnvironment()) {
-    return NextResponse.json({ error: "Cannot save on Vercel." }, { status: 503 });
-  }
+  const blocked = requireWritableStorage();
+  if (blocked) return blocked;
 
   const body = (await request.json()) as GramaInput;
   if (!body.stanaId?.trim()) {
@@ -28,8 +28,9 @@ export async function POST(request: Request) {
       name: body.name.trim(),
     });
     return NextResponse.json(grama, { status: 201 });
-  } catch {
-    return NextResponse.json({ error: "Mandala not found" }, { status: 404 });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Mandala not found";
+    return NextResponse.json({ error: message }, { status: error instanceof Error && error.message.includes("GitHub") ? 503 : 404 });
   }
 }
 
@@ -38,18 +39,22 @@ export async function PATCH(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!isWritableEnvironment()) {
-    return NextResponse.json({ error: "Cannot save on Vercel." }, { status: 503 });
-  }
+  const blocked = requireWritableStorage();
+  if (blocked) return blocked;
 
   const body = (await request.json()) as GramaInput & NameUpdate & { gramaId: string };
   if (!body.stanaId || !body.gramaId || !body.name?.trim()) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
   }
 
-  const grama = await updateGrama(body.stanaId, body.gramaId, body.name);
-  if (!grama) return NextResponse.json({ error: "Grama not found" }, { status: 404 });
-  return NextResponse.json(grama);
+  try {
+    const grama = await updateGrama(body.stanaId, body.gramaId, body.name);
+    if (!grama) return NextResponse.json({ error: "Grama not found" }, { status: 404 });
+    return NextResponse.json(grama);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to update grama";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
 
 export async function DELETE(request: Request) {
@@ -57,9 +62,8 @@ export async function DELETE(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!isWritableEnvironment()) {
-    return NextResponse.json({ error: "Cannot save on Vercel." }, { status: 503 });
-  }
+  const blocked = requireWritableStorage();
+  if (blocked) return blocked;
 
   const { searchParams } = new URL(request.url);
   const stanaId = searchParams.get("stanaId");
@@ -69,7 +73,12 @@ export async function DELETE(request: Request) {
     return NextResponse.json({ error: "stanaId and gramaId required" }, { status: 400 });
   }
 
-  const removed = await removeGrama(stanaId, gramaId);
-  if (!removed) return NextResponse.json({ error: "Grama not found" }, { status: 404 });
-  return NextResponse.json({ success: true });
+  try {
+    const removed = await removeGrama(stanaId, gramaId);
+    if (!removed) return NextResponse.json({ error: "Grama not found" }, { status: 404 });
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to delete grama";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }

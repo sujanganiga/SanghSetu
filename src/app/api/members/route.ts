@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/auth";
+import { requireWritableStorage } from "@/lib/api-utils";
 import {
   addMember,
   flattenMembers,
@@ -7,7 +8,6 @@ import {
   getMembersByArea,
   getMembersByUpavathi,
   getMembersByStana,
-  isWritableEnvironment,
 } from "@/lib/organization";
 import type { MemberInput } from "@/types/organization";
 
@@ -39,15 +39,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!isWritableEnvironment()) {
-    return NextResponse.json(
-      {
-        error:
-          "Cannot save on Vercel. Run locally (npm run dev), update members, then push data/mandal.json to redeploy.",
-      },
-      { status: 503 }
-    );
-  }
+  const blocked = requireWritableStorage();
+  if (blocked) return blocked;
 
   const body = (await request.json()) as MemberInput;
 
@@ -68,7 +61,8 @@ export async function POST(request: Request) {
       joinedDate: body.joinedDate?.trim(),
     });
     return NextResponse.json(member, { status: 201 });
-  } catch {
-    return NextResponse.json({ error: "Area not found" }, { status: 404 });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to save member";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { isAdmin } from "@/lib/auth";
-import { isWritableEnvironment, removeMember, updateMember } from "@/lib/organization";
+import { requireWritableStorage } from "@/lib/api-utils";
+import { removeMember, updateMember } from "@/lib/organization";
 import type { MemberUpdate } from "@/types/organization";
 
 export const dynamic = "force-dynamic";
@@ -13,23 +14,21 @@ export async function PUT(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!isWritableEnvironment()) {
-    return NextResponse.json(
-      {
-        error:
-          "Cannot save on Vercel. Run locally (npm run dev), update members, then push data/mandal.json to redeploy.",
-      },
-      { status: 503 }
-    );
-  }
+  const blocked = requireWritableStorage();
+  if (blocked) return blocked;
 
   const body = (await request.json()) as MemberUpdate;
-  const member = await updateMember(params.id, body);
-  if (!member) {
-    return NextResponse.json({ error: "Member not found" }, { status: 404 });
-  }
 
-  return NextResponse.json(member);
+  try {
+    const member = await updateMember(params.id, body);
+    if (!member) {
+      return NextResponse.json({ error: "Member not found" }, { status: 404 });
+    }
+    return NextResponse.json(member);
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to update member";
+    return NextResponse.json({ error: message }, { status: 500 });
+  }
 }
 
 export async function DELETE(
@@ -40,20 +39,17 @@ export async function DELETE(
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   }
 
-  if (!isWritableEnvironment()) {
-    return NextResponse.json(
-      {
-        error:
-          "Cannot save on Vercel. Run locally (npm run dev), update members, then push data/mandal.json to redeploy.",
-      },
-      { status: 503 }
-    );
-  }
+  const blocked = requireWritableStorage();
+  if (blocked) return blocked;
 
-  const removed = await removeMember(params.id);
-  if (!removed) {
-    return NextResponse.json({ error: "Member not found" }, { status: 404 });
+  try {
+    const removed = await removeMember(params.id);
+    if (!removed) {
+      return NextResponse.json({ error: "Member not found" }, { status: 404 });
+    }
+    return NextResponse.json({ success: true });
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to remove member";
+    return NextResponse.json({ error: message }, { status: 500 });
   }
-
-  return NextResponse.json({ success: true });
 }
