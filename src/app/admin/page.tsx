@@ -11,6 +11,7 @@ import AddUpavathiForm from "@/components/AddUpavathiForm";
 import AddStanaForm from "@/components/AddStanaForm";
 import EditMemberForm from "@/components/EditMemberForm";
 import EditNodeForm, { type EditNodeTarget } from "@/components/EditNodeForm";
+import StorageStatusBanner from "@/components/StorageStatusBanner";
 import { HIERARCHY_PATH, LABELS } from "@/lib/labels";
 import type { Mandal, MemberWithPath } from "@/types/organization";
 import { getAllAreaOptions } from "@/lib/client-utils";
@@ -166,6 +167,7 @@ export default function AdminPage() {
             Logout
           </button>
         </div>
+        <StorageStatusBanner />
         {mandal && (
           <>
             <div className="grid gap-6 lg:grid-cols-2">
