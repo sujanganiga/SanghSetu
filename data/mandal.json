@@ -1,0 +1,722 @@
+{
+  "id": "kundapura-taluku",
+  "name": "Kundapura Taluku",
+  "stanas": [
+    {
+      "id": "id-81617",
+      "name": "ಗಂಗೊಳ್ಳಿ",
+      "gramas": [
+        {
+          "id": "id-81617",
+          "name": "ಗಂಗೊಳ್ಳಿ",
+          "upavathis": [
+            {
+              "id": "id-81617-upavasathi",
+              "name": "ಗಂಗೊಳ್ಳಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-81617-shakha",
+                  "name": "ಗಂಗೊಳ್ಳಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-93132",
+          "name": "ಗುಜ್ಜಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-93132-upavasathi",
+              "name": "ಗುಜ್ಜಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-93132-shakha",
+                  "name": "ಗುಜ್ಜಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-29356",
+          "name": "ಹೊಸಾಡು",
+          "upavathis": [
+            {
+              "id": "id-29356-upavasathi",
+              "name": "ಹೊಸಾಡು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-29356-shakha",
+                  "name": "ಹೊಸಾಡು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-9444",
+          "name": "ತ್ರಾಸಿ",
+          "upavathis": [
+            {
+              "id": "id-9444-upavasathi",
+              "name": "ತ್ರಾಸಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-9444-shakha",
+                  "name": "ತ್ರಾಸಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-82965",
+      "name": "ಹೆಮ್ಮಾಡಿ",
+      "gramas": [
+        {
+          "id": "id-82965",
+          "name": "ಹೆಮ್ಮಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-82965-upavasathi",
+              "name": "ಹೆಮ್ಮಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-82965-shakha",
+                  "name": "ಹೆಮ್ಮಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "-",
+          "name": "ಕಟ್ ಬೆಲ್ತೂರು",
+          "upavathis": [
+            {
+              "id": "--upavasathi",
+              "name": "ಕಟ್ ಬೆಲ್ತೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "--shakha",
+                  "name": "ಕಟ್ ಬೆಲ್ತೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-38919",
+          "name": "ದೇವಲ್ಕುಂದ",
+          "upavathis": [
+            {
+              "id": "id-38919-upavasathi",
+              "name": "ದೇವಲ್ಕುಂದ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-38919-shakha",
+                  "name": "ದೇವಲ್ಕುಂದ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-41892",
+      "name": "ತಲ್ಲೂರು",
+      "gramas": [
+        {
+          "id": "id-41892",
+          "name": "ತಲ್ಲೂರು",
+          "upavathis": [
+            {
+              "id": "id-41892-upavasathi",
+              "name": "ತಲ್ಲೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-41892-shakha",
+                  "name": "ತಲ್ಲೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-75215",
+          "name": "ಉಪ್ಪಿನಕುದ್ರು",
+          "upavathis": [
+            {
+              "id": "id-75215-upavasathi",
+              "name": "ಉಪ್ಪಿನಕುದ್ರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-75215-shakha",
+                  "name": "ಉಪ್ಪಿನಕುದ್ರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-1115",
+          "name": "ಹಟ್ಟಿಯಂಗಡಿ",
+          "upavathis": [
+            {
+              "id": "id-1115-upavasathi",
+              "name": "ಹಟ್ಟಿಯಂಗಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-1115-shakha",
+                  "name": "ಹಟ್ಟಿಯಂಗಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-23919",
+      "name": "ಕರ್ಕುಂಜೆ",
+      "gramas": [
+        {
+          "id": "id-32592",
+          "name": "ನೇರಳಕಟ್ಟೆ",
+          "upavathis": [
+            {
+              "id": "id-32592-upavasathi",
+              "name": "ನೇರಳಕಟ್ಟೆ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-32592-shakha",
+                  "name": "ನೇರಳಕಟ್ಟೆ Shakaha",
+                  "members": [
+                    {
+                      "id": "3f25ae6e-7231-4c23-9f01-b08e4669f621",
+                      "name": "sujan",
+                      "phone": "09483293263",
+                      "role": "swayamsevak",
+                      "address": "\"JAGADAMBA KRIPA\"",
+                      "joinedDate": ""
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-74045",
+          "name": "ಗುಲ್ವಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-74045-upavasathi",
+              "name": "ಗುಲ್ವಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-74045-shakha",
+                  "name": "ಗುಲ್ವಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-54646",
+          "name": "ಕೆಂಚನೂರು",
+          "upavathis": [
+            {
+              "id": "id-54646-upavasathi",
+              "name": "ಕೆಂಚನೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-54646-shakha",
+                  "name": "ಕೆಂಚನೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-20469",
+          "name": "ಕನ್ಯಾನ",
+          "upavathis": [
+            {
+              "id": "id-20469-upavasathi",
+              "name": "ಕನ್ಯಾನ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-20469-shakha",
+                  "name": "ಕನ್ಯಾನ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-92264",
+      "name": "ಬಸ್ರೂರು",
+      "gramas": [
+        {
+          "id": "id-92264",
+          "name": "ಬಸ್ರೂರು",
+          "upavathis": [
+            {
+              "id": "id-92264-upavasathi",
+              "name": "ಬಸ್ರೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-92264-shakha",
+                  "name": "ಬಸ್ರೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-43846",
+          "name": "ಕಂದಾವರ",
+          "upavathis": [
+            {
+              "id": "id-43846-upavasathi",
+              "name": "ಕಂದಾವರ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-43846-shakha",
+                  "name": "ಕಂದಾವರ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-8322",
+          "name": "ಬಳ್ಕೂರು",
+          "upavathis": [
+            {
+              "id": "id-8322-upavasathi",
+              "name": "ಬಳ್ಕೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-8322-shakha",
+                  "name": "ಬಳ್ಕೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-98717",
+          "name": "ಆನಗಳ್ಳಿ",
+          "upavathis": [
+            {
+              "id": "id-98717-upavasathi",
+              "name": "ಆನಗಳ್ಳಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-98717-shakha",
+                  "name": "ಆನಗಳ್ಳಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-30041",
+      "name": "ಹೊಂಬಾಡಿ",
+      "gramas": [
+        {
+          "id": "id-30041",
+          "name": "ಹೊಂಬಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-30041-upavasathi",
+              "name": "ಹೊಂಬಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-30041-shakha",
+                  "name": "ಹೊಂಬಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-34023",
+          "name": "ಜಪ್ತಿ",
+          "upavathis": [
+            {
+              "id": "id-34023-upavasathi",
+              "name": "ಜಪ್ತಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-34023-shakha",
+                  "name": "ಜಪ್ತಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-46203",
+          "name": "ಯಾಡಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-46203-upavasathi",
+              "name": "ಯಾಡಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-46203-shakha",
+                  "name": "ಯಾಡಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-24757",
+      "name": "ಕೊರ್ಗಿ",
+      "gramas": [
+        {
+          "id": "id-24757",
+          "name": "ಕೊರ್ಗಿ",
+          "upavathis": [
+            {
+              "id": "id-24757-upavasathi",
+              "name": "ಕೊರ್ಗಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-24757-shakha",
+                  "name": "ಕೊರ್ಗಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-62345",
+          "name": "ಹೆಸ್ಕತ್ತೂರು",
+          "upavathis": [
+            {
+              "id": "id-62345-upavasathi",
+              "name": "ಹೆಸ್ಕತ್ತೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-62345-shakha",
+                  "name": "ಹೆಸ್ಕತ್ತೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-56088",
+      "name": "ಬೇಳೂರು",
+      "gramas": [
+        {
+          "id": "id-56088",
+          "name": "ಬೇಳೂರು",
+          "upavathis": [
+            {
+              "id": "id-56088-upavasathi",
+              "name": "ಬೇಳೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-56088-shakha",
+                  "name": "ಬೇಳೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-67020",
+          "name": "ಕೇದೂರು",
+          "upavathis": [
+            {
+              "id": "id-67020-upavasathi",
+              "name": "ಕೇದೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-67020-shakha",
+                  "name": "ಕೇದೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-38170",
+      "name": "ತೆಕ್ಕಟ್ಟೆ",
+      "gramas": [
+        {
+          "id": "id-38170",
+          "name": "ತೆಕ್ಕಟ್ಟೆ",
+          "upavathis": [
+            {
+              "id": "id-38170-upavasathi",
+              "name": "ತೆಕ್ಕಟ್ಟೆ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-38170-shakha",
+                  "name": "ತೆಕ್ಕಟ್ಟೆ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-81499",
+          "name": "ಉಳ್ತೂರು",
+          "upavathis": [
+            {
+              "id": "id-81499-upavasathi",
+              "name": "ಉಳ್ತೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-81499-shakha",
+                  "name": "ಉಳ್ತೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-22298",
+          "name": "ಕುಂಬಾಶಿ",
+          "upavathis": [
+            {
+              "id": "id-22298-upavasathi",
+              "name": "ಕುಂಬಾಶಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-22298-shakha",
+                  "name": "ಕುಂಬಾಶಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-49206",
+      "name": "ಬೀಜಾಡಿ",
+      "gramas": [
+        {
+          "id": "id-49206",
+          "name": "ಬೀಜಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-49206-upavasathi",
+              "name": "ಬೀಜಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-49206-shakha",
+                  "name": "ಬೀಜಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-96588",
+          "name": "ಗೋಪಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-96588-upavasathi",
+              "name": "ಗೋಪಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-96588-shakha",
+                  "name": "ಗೋಪಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-60117",
+      "name": "ಕೋಟೇಶ್ವರ",
+      "gramas": [
+        {
+          "id": "id-60117",
+          "name": "ಕೋಟೇಶ್ವರ",
+          "upavathis": [
+            {
+              "id": "id-60117-upavasathi",
+              "name": "ಕೋಟೇಶ್ವರ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-60117-shakha",
+                  "name": "ಕೋಟೇಶ್ವರ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-95058",
+          "name": "ಹಂಗಳೂರು",
+          "upavathis": [
+            {
+              "id": "id-95058-upavasathi",
+              "name": "ಹಂಗಳೂರು Upavasathi",
+              "areas": [
+                {
+                  "id": "id-95058-shakha",
+                  "name": "ಹಂಗಳೂರು Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-5395",
+          "name": "ಕೋಣಿ",
+          "upavathis": [
+            {
+              "id": "id-5395-upavasathi",
+              "name": "ಕೋಣಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-5395-shakha",
+                  "name": "ಕೋಣಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-65269",
+          "name": "ವಕ್ವಾಡಿ",
+          "upavathis": [
+            {
+              "id": "id-65269-upavasathi",
+              "name": "ವಕ್ವಾಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-65269-shakha",
+                  "name": "ವಕ್ವಾಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-87115",
+      "name": "ಕುಂದಾಪುರ",
+      "gramas": [
+        {
+          "id": "id-30029",
+          "name": "ನಗರ",
+          "upavathis": [
+            {
+              "id": "id-30029-upavasathi",
+              "name": "ನಗರ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-30029-shakha",
+                  "name": "ನಗರ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id-49394",
+      "name": "ಕಾಳವಾರ",
+      "gramas": [
+        {
+          "id": "id-49394",
+          "name": "ಕಾಳವಾರ",
+          "upavathis": [
+            {
+              "id": "id-49394-upavasathi",
+              "name": "ಕಾಳವಾರ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-49394-shakha",
+                  "name": "ಕಾಳವಾರ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "id-25275",
+          "name": "ಅಸೋಡಿ",
+          "upavathis": [
+            {
+              "id": "id-25275-upavasathi",
+              "name": "ಅಸೋಡಿ Upavasathi",
+              "areas": [
+                {
+                  "id": "id-25275-shakha",
+                  "name": "ಅಸೋಡಿ Shakaha",
+                  "members": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
