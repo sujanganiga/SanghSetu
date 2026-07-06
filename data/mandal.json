@@ -225,7 +225,16 @@
                 {
                   "id": "nisarga",
                   "name": "Nisarga",
-                  "members": []
+                  "members": [
+                    {
+                      "id": "9d919091-3c57-4b86-8417-5ce16ce5b8ff",
+                      "name": "Jayaram",
+                      "phone": "8073216149",
+                      "role": "Kundapura taluku saha karya vaha",
+                      "address": "S/o chandra nisarga neralakatte",
+                      "joinedDate": ""
+                    }
+                  ]
                 }
               ]
             }
